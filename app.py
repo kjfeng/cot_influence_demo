@@ -29,12 +29,14 @@ with gr.Blocks(title="CoT Monitoring Demo", theme=gr.themes.Base()) as app:
 
             reasoning_accordion = gr.Accordion("Show reasoning", open=False, visible=False, render=False)
             with reasoning_accordion:
-                reasoning_chain = gr.Textbox(
-                    label="Encoded reasoning chain",
-                    lines=10,
-                    max_lines=100,
-                    interactive=False
-                )
+                # reasoning_chain = gr.Textbox(
+                #     label="Encoded reasoning chain",
+                #     lines=20,
+                #     max_lines=100,
+                #     interactive=False,
+                # )
+
+                reasoning_chain = gr.Markdown()
 
 
             gr.ChatInterface(
@@ -77,17 +79,13 @@ with gr.Blocks(title="CoT Monitoring Demo", theme=gr.themes.Base()) as app:
                         label="Evidence Details",
                         lines=10,
                         max_lines=100,
-                        interactive=False
+                        interactive=False,
+                        elem_classes="reasoning-box"
                     )
                 
                 reasoning_accordion = gr.Accordion("Show reasoning", open=False, visible=False)
                 with reasoning_accordion:
-                    reasoning_output = gr.Textbox(
-                        label="Decoded reasoning chain",
-                        lines=10,
-                        max_lines=100,
-                        interactive=False
-                    )
+                    reasoning_output = gr.Markdown()
             
             # Event handler for inspect
             inspect_btn.click(

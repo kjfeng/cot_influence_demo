@@ -177,7 +177,7 @@ examples_strs = [
 ]
 
 example_labels = [
-    "Deceptive: Genetic Engineering",
+    "Deceptive: Genetic Engineering For Disease Elimination",
     "Logical Reasoning: Virtual AI Companions",
     "Deceptive: Social Media Verification",
     "Expert Writer Rhetorics: Corporate Climate Impacts"
