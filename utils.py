@@ -28,7 +28,7 @@ def get_model_response(message, history):
         
         # Call Together API
         response = client.chat.completions.create(
-            model="deepseek-ai/DeepSeek-R1-0528",
+            model="deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
             messages=messages,
             temperature=0.7,
         )
