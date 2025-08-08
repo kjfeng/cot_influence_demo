@@ -141,7 +141,13 @@ def format_grader_output(reasoning):
         if hidden_reasoning:
             reasoning_to_grade = hidden_reasoning
         else:
-            reasoning_to_grade = reasoning
+            return (
+                "∅ No reasoning found in the output.", 
+                "No reasoning found in the output.", 
+                gr.Accordion(visible=False),
+                "",
+                gr.Accordion(visible=False)
+            )
         
         grader_result = call_grader(reasoning_to_grade)
         
